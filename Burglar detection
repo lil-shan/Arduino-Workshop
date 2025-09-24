@@ -1,0 +1,26 @@
+void setup() {
+
+  pinMode(irSensorPin, INPUT);
+  
+
+  pinMode(buzzerPin, OUTPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+
+  int sensorState = digitalRead(irSensorPin);
+
+
+  if (sensorState == LOW) {
+    digitalWrite(buzzerPin, HIGH); 
+    Serial.println("Obstacle detected! Beep!");
+  } else {
+   
+    digitalWrite(buzzerPin, LOW); 
+    Serial.println("No obstacle.");
+  }
+  
+  delay(100);
+}
