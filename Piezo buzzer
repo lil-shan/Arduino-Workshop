@@ -1,0 +1,12 @@
+int buzzerPin = 8;
+
+void setup() {
+
+}
+
+void loop() {
+  tone(buzzerPin, 1000); 
+  delay(50);           
+  noTone(buzzerPin);     
+  delay(50);          
+}
